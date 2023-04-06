@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F168922529DE465900C789DF /* LlamaCPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168922429DE465900C789DF /* LlamaCPP.swift */; };
+		F168922829DE46CE00C789DF /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = F168922729DE46CE00C789DF /* Defaults */; };
 		F1FCE68029DBE12B0020B40F /* PenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FCE67F29DBE12B0020B40F /* PenApp.swift */; };
 		F1FCE68229DBE12B0020B40F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FCE68129DBE12B0020B40F /* ContentView.swift */; };
 		F1FCE68429DBE12C0020B40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FCE68329DBE12C0020B40F /* Assets.xcassets */; };
 		F1FCE68729DBE12C0020B40F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FCE68629DBE12C0020B40F /* Preview Assets.xcassets */; };
+		F1FCE68F29DBE2000020B40F /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FCE68E29DBE2000020B40F /* ControlView.swift */; };
+		F1FCE69229DBE3E40020B40F /* CompactSlider in Frameworks */ = {isa = PBXBuildFile; productRef = F1FCE69129DBE3E40020B40F /* CompactSlider */; };
+		F1FCE6A629DD3E510020B40F /* llama in Frameworks */ = {isa = PBXBuildFile; productRef = F1FCE6A529DD3E510020B40F /* llama */; };
+		F1FCE6A929DD3F390020B40F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FCE6A829DD3F390020B40F /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F168922429DE465900C789DF /* LlamaCPP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaCPP.swift; sourceTree = "<group>"; };
 		F1FCE67C29DBE12B0020B40F /* Pen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FCE67F29DBE12B0020B40F /* PenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenApp.swift; sourceTree = "<group>"; };
 		F1FCE68129DBE12B0020B40F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1FCE68329DBE12C0020B40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1FCE68629DBE12C0020B40F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1FCE68829DBE12C0020B40F /* Pen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pen.entitlements; sourceTree = "<group>"; };
+		F1FCE68E29DBE2000020B40F /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		F1FCE6A829DD3F390020B40F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F168922829DE46CE00C789DF /* Defaults in Frameworks */,
+				F1FCE6A929DD3F390020B40F /* Accelerate.framework in Frameworks */,
+				F1FCE6A629DD3E510020B40F /* llama in Frameworks */,
+				F1FCE69229DBE3E40020B40F /* CompactSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +51,7 @@
 			children = (
 				F1FCE67E29DBE12B0020B40F /* Pen */,
 				F1FCE67D29DBE12B0020B40F /* Products */,
+				F1FCE6A729DD3F380020B40F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +68,8 @@
 			children = (
 				F1FCE67F29DBE12B0020B40F /* PenApp.swift */,
 				F1FCE68129DBE12B0020B40F /* ContentView.swift */,
+				F1FCE68E29DBE2000020B40F /* ControlView.swift */,
+				F168922429DE465900C789DF /* LlamaCPP.swift */,
 				F1FCE68329DBE12C0020B40F /* Assets.xcassets */,
 				F1FCE68829DBE12C0020B40F /* Pen.entitlements */,
 				F1FCE68529DBE12C0020B40F /* Preview Content */,
@@ -67,6 +83,14 @@
 				F1FCE68629DBE12C0020B40F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F1FCE6A729DD3F380020B40F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1FCE6A829DD3F390020B40F /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +109,11 @@
 			dependencies = (
 			);
 			name = Pen;
+			packageProductDependencies = (
+				F1FCE69129DBE3E40020B40F /* CompactSlider */,
+				F1FCE6A529DD3E510020B40F /* llama */,
+				F168922729DE46CE00C789DF /* Defaults */,
+			);
 			productName = Pen;
 			productReference = F1FCE67C29DBE12B0020B40F /* Pen.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +142,11 @@
 				Base,
 			);
 			mainGroup = F1FCE67329DBE12B0020B40F;
+			packageReferences = (
+				F1FCE69029DBE3E40020B40F /* XCRemoteSwiftPackageReference "CompactSlider" */,
+				F1FCE6A429DD3E510020B40F /* XCRemoteSwiftPackageReference "llama.cpp" */,
+				F168922629DE46CE00C789DF /* XCRemoteSwiftPackageReference "Defaults" */,
+			);
 			productRefGroup = F1FCE67D29DBE12B0020B40F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FCE68229DBE12B0020B40F /* ContentView.swift in Sources */,
+				F1FCE68F29DBE2000020B40F /* ControlView.swift in Sources */,
 				F1FCE68029DBE12B0020B40F /* PenApp.swift in Sources */,
+				F168922529DE465900C789DF /* LlamaCPP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +372,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F168922629DE46CE00C789DF /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F1FCE69029DBE3E40020B40F /* XCRemoteSwiftPackageReference "CompactSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/buh/CompactSlider.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		F1FCE6A429DD3E510020B40F /* XCRemoteSwiftPackageReference "llama.cpp" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cyrilzakka/llama.cpp.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F168922729DE46CE00C789DF /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F168922629DE46CE00C789DF /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		F1FCE69129DBE3E40020B40F /* CompactSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1FCE69029DBE3E40020B40F /* XCRemoteSwiftPackageReference "CompactSlider" */;
+			productName = CompactSlider;
+		};
+		F1FCE6A529DD3E510020B40F /* llama */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1FCE6A429DD3E510020B40F /* XCRemoteSwiftPackageReference "llama.cpp" */;
+			productName = llama;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1FCE67429DBE12B0020B40F /* Project object */;
 }

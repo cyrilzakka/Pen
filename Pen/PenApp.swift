@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Defaults
 
 @main
 struct PenApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
